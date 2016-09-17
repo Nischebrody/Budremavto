@@ -12,11 +12,11 @@ const views = __dirname + stat + '/' + 'views' + '/';
 app.use(express.static(__dirname + stat));
 
 app.get('/', function (req, res) {
-    res.render(views + "index.pug");
+    res.render(views + "index.jade");
 });
 
 app.get('/info', function (req, res) {
-    res.render(views + "info.pug");
+    res.render(views + "info.jade");
 });
 
 var server = app.listen(8080, 'localhost', function () {

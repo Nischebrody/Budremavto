@@ -3,5 +3,6 @@
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{Budremavto node_modules}" />
     <file url="file://$PROJECT_DIR$/index.js" libraries="{ECMAScript 6}" />
+    <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>
