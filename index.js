@@ -6,7 +6,7 @@ var express = require('express');
 var app = express();
 
 const stat = '/public';
-const views = __dirname + stat + '/' + 'views' + '/';
+const views = __dirname + stat + '/views/';
 
 //Declaration of resources
 app.use(express.static(__dirname + stat));
