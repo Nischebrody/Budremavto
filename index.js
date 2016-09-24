@@ -15,6 +15,17 @@ app.get('/', function (req, res) {
     res.render(views + "index.jade");
 });
 
+app.get('/user/:id?', function(req, res,next){
+    var id = req.params.id;
+    if (id) {
+        res.send(id);
+    } else {
+        next();
+    }
+});
+app.get('/users', function(req, res) {
+    res.send("from user")
+});
 app.get('/info', function (req, res) {
     res.render(views + "info.jade");
 });

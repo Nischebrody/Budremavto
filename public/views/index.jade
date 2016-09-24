@@ -11,8 +11,7 @@ html(lang="en")
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
 body(ng-app)
-  <!-- Navigation -->
-  nav.navbar.navbar-inverse.navbar-fixed-top.header-style(role="navigation")
+  nav.navbar.navbar-inverse.navbar-fixed-top.style-header(role="navigation")
     div.header-tel-number.col-lg-10.col-lg-offset-1.col-xs-12
       span
         i.fa.fa-phone
@@ -24,7 +23,6 @@ body(ng-app)
         a(href="/en")
           img(src="/resources/logos/United-Kingdom-flag.png")
     div.container.col-lg-10.col-lg-offset-1.col-xs-12
-      <!-- Brand and toggle get grouped for better mobile display -->
       div.navbar-header
         button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
           span.sr-only Toggle navigation
@@ -33,9 +31,8 @@ body(ng-app)
           span.icon-bar
         div(id="brand-title-div")
           a.navbar-brand(href="/")
-            img(id="brand-image" src="/resources/logos/log.png" style="height:50px")
+            img(id="brand-image" src="/resources/logos/log.png" style="height:40px")
             div(id="brand-title") Будремавто
-      <!-- Collect the nav links, forms, and other content for toggling -->
       div.collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
         ul.nav.navbar-nav.navbar-right
           li
@@ -56,6 +53,28 @@ body(ng-app)
           li
             a(href="/order/")
               i.fa.fa-shopping-cart Замовлення
+  header(id="carousel" class="carousel slide")
+    .carousel-inner
+      .item.active
+        .fill(style="background-image:url('/resources/slider/slide_1.jpg')")
+      .item
+        .fill(style="background-image:url('/resources/slider/slide_2.jpg')")
+      .item
+        .fill(style="background-image:url('/resources/slider/slide_3.jpg')")
+      .item
+        .fill(style="background-image:url('/resources/slider/slide_4.jpg')")
+      .item
+        .fill(style="background-image:url('/resources/slider/slide_5.jpg')")
+    <!-- Controls -->
+    a.left.carousel-control(href="#carousel" data-slide="prev")
+      span.icon-prev
+    a.right.carousel-control(href="#carousel" data-slide="next")
+      span.icon-next
+
+
+
+
+
 
   div.jumbotron(ng-show="ShowCheck")
     .container
