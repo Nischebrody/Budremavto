@@ -1,83 +1,87 @@
 doctype html
 html(lang="en")
-    head
-        title Main page
-        link(rel='stylesheet', href='/styles/style.css')
-        //link(href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css")
-        script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js")
-        script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js")
-        <!-- Latest compiled and minified CSS -->
-        link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
-        <!-- Latest compiled JavaScript -->
-        script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+  head
+    title Main page
+    link(rel='stylesheet', href='/styles/style.css')
+    script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js")
+    <!-- Latest compiled and minified CSS -->
+    link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
 body(ng-app)
-    <!-- Navigation -->
-    nav.navbar.navbar-inverse.navbar-fixed-top.header-style(role="navigation")
-        div.header-tel-number.col-lg-10.col-lg-offset-1.col-xs-12
-            span
-                i.fa.fa-phone
-                    | 093-411-37-74
-            span.lang(id="ukr" title="Українською")
-                a(href="/")
-                    img(src="/resources/logos/Ukraine-Flag.png")
-            span.lang(id="en" title="English")
-                a(href="/en")
-                    img(src="/resources/logos/United-Kingdom-flag.png")
-        div.container.col-lg-10.col-lg-offset-1.col-xs-12
-            <!-- Brand and toggle get grouped for better mobile display -->
-            div.navbar-header
-                button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
-                    span.sr-only Toggle navigation
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
-                div(id="brand-title-div")
-                    a.navbar-brand(href="/")
-                        img(id="brand-image" src="/resources/logos/log.png" style="height:50px")
-                        div(id="brand-title") Будремавто
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            div.collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
-                ul.nav.navbar-nav.navbar-right
-                    li
-                        a(href="/")
-                            i.fa.fa-home Головна
-                    li
-                        a(href="/about/")
-                            i.fa.fa-tree Про компанію
-                    li
-                        a(href="/product/")
-                            i.fa.fa-bars Товари
-                    li
-                        a(href="/vacancy/")
-                            i.fa.fa-info Вакансії
-                    li
-                        a(href="/contacts/")
-                            i.fa.fa-info Контакти
-                    li
-                        a(href="/order/")
-                            i.fa.fa-shopping-cart Замовлення
+  <!-- Navigation -->
+  nav.navbar.navbar-inverse.navbar-fixed-top.header-style(role="navigation")
+    div.header-tel-number.col-lg-10.col-lg-offset-1.col-xs-12
+      span
+        i.fa.fa-phone
+          | 093-411-37-74
+      span.lang(id="ukr" title="Українською")
+        a(href="/")
+          img(src="/resources/logos/Ukraine-Flag.png")
+      span.lang(id="en" title="English")
+        a(href="/en")
+          img(src="/resources/logos/United-Kingdom-flag.png")
+    div.container.col-lg-10.col-lg-offset-1.col-xs-12
+      <!-- Brand and toggle get grouped for better mobile display -->
+      div.navbar-header
+        button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        div(id="brand-title-div")
+          a.navbar-brand(href="/")
+            img(id="brand-image" src="/resources/logos/log.png" style="height:50px")
+            div(id="brand-title") Будремавто
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      div.collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href="/")
+              i.fa.fa-home Головна
+          li
+            a(href="/about/")
+              i.fa.fa-tree Про компанію
+          li
+            a(href="/product/")
+              i.fa.fa-bars Товари
+          li
+            a(href="/vacancy/")
+              i.fa.fa-info Вакансії
+          li
+            a(href="/contacts/")
+              i.fa.fa-info Контакти
+          li
+            a(href="/order/")
+              i.fa.fa-shopping-cart Замовлення
 
-    div.jumbotron(ng-show="ShowCheck")
-        .container
-            h1.main-page Welcome to the Budremavto site
-            p
-                | Best of the best construction company! {{name}}
-            a.btn.btn-primary.btn-lg(href="/info") More information
-
-
-
-
-    br
-    br
-    br
-
-
-
-
+  div.jumbotron(ng-show="ShowCheck")
     .container
-        | Enter text for test Angular
-        input(type="text" ng-model="name")
-        br
-        | Нажмите что б увидеть текст
-        input(type="checkbox" ng-model="ShowCheck")
+      h1.main-page Welcome to the Budremavto site
+      p
+        | Best of the best construction company! {{name}}
+      a.btn.btn-primary.btn-lg(href="/info") More information
 
+
+
+
+  br
+  br
+  br
+
+
+
+
+  .container
+    | Enter text for test Angular
+    input(type="text" ng-model="name")
+    br
+    | Нажмите что б увидеть текст
+    input(type="checkbox" ng-model="ShowCheck")
+
+
+
+
+script(src="../scripts/main.js")
