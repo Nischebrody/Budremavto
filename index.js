@@ -23,11 +23,28 @@ app.get('/user/:id?', function(req, res,next){
         next();
     }
 });
+
+app.get('/index', function (req, res) {
+    res.render(views + "index.jade");
+});
+
 app.get('/users', function(req, res) {
     res.send("from user")
 });
-app.get('/info', function (req, res) {
-    res.render(views + "info.jade");
+app.get('/about', function (req, res) {
+    res.render(views + "about.jade");
+});
+app.get('/contact', function (req, res) {
+    res.render(views + "contact.jade");
+});
+app.get('/gallery', function (req, res) {
+    res.render(views + "gallery.jade");
+});
+app.get('/services', function (req, res) {
+    res.render(views + "services.jade");
+});
+app.get('/prices', function (req, res) {
+    res.render(views + "prices.jade");
 });
 
 var server = app.listen(8080, 'localhost', function () {

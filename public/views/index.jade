@@ -1,106 +1,148 @@
 doctype html
-html(lang="en")
+html(lang='en')
   head
-    title Main page
-    link(rel='stylesheet', href='/styles/style.css')
-    script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js")
-    <!-- Latest compiled and minified CSS -->
-    link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
-body(ng-app)
-  nav.navbar.navbar-inverse.navbar-fixed-top.style-header(role="navigation")
-    div.header-tel-number.col-lg-10.col-lg-offset-1.col-xs-12
-      span
-        i.fa.fa-phone
-          | 093-411-37-74
-      span.lang(id="ukr" title="Українською")
-        a(href="/")
-          img(src="/resources/logos/Ukraine-Flag.png")
-      span.lang(id="en" title="English")
-        a(href="/en")
-          img(src="/resources/logos/United-Kingdom-flag.png")
-    div.container.col-lg-10.col-lg-offset-1.col-xs-12
-      div.navbar-header
-        button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
-          span.sr-only Toggle navigation
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        div(id="brand-title-div")
-          a.navbar-brand(href="/")
-            img(id="brand-image" src="/resources/logos/log.png" style="height:40px")
-            div(id="brand-title") Будремавто
-      div.collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
-        ul.nav.navbar-nav.navbar-right
-          li
-            a(href="/")
-              i.fa.fa-home Головна
-          li
-            a(href="/about/")
-              i.fa.fa-tree Про компанію
-          li
-            a(href="/product/")
-              i.fa.fa-bars Товари
-          li
-            a(href="/vacancy/")
-              i.fa.fa-info Вакансії
-          li
-            a(href="/contacts/")
-              i.fa.fa-info Контакти
-          li
-            a(href="/order/")
-              i.fa.fa-shopping-cart Замовлення
-  header(id="carousel" class="carousel slide")
-    .carousel-inner
-      .item.active
-        .fill(style="background-image:url('/resources/slider/slide_1.jpg')")
-      .item
-        .fill(style="background-image:url('/resources/slider/slide_2.jpg')")
-      .item
-        .fill(style="background-image:url('/resources/slider/slide_3.jpg')")
-      .item
-        .fill(style="background-image:url('/resources/slider/slide_4.jpg')")
-      .item
-        .fill(style="background-image:url('/resources/slider/slide_5.jpg')")
-    <!-- Controls -->
-    a.left.carousel-control(href="#carousel" data-slide="prev")
-      span.icon-prev
-    a.right.carousel-control(href="#carousel" data-slide="next")
-      span.icon-next
-
-
-
-
-
-
-  div.jumbotron(ng-show="ShowCheck")
+  body
+    include templates/header
+    #slides
+      img(src='../img/slider/images/slide_1.jpg', alt='')
+      img(src='../img/slider/images/1.jpg', alt='')
+      img(src='../img/slider/images/slide_3.jpg', alt='')
+      img(src='../img/slider/images/slide_4.jpg', alt='')
+      img(src='../img/slider/images/slide_5.jpg', alt='')
     .container
-      h1.main-page Welcome to the Budremavto site
-      p
-        | Best of the best construction company! {{name}}
-      a.btn.btn-primary.btn-lg(href="/info") More information
-
-
-
-
-  br
-  br
-  br
-
-
-
-
-  .container
-    | Enter text for test Angular
-    input(type="text" ng-model="name")
-    br
-    | Нажмите что б увидеть текст
-    input(type="checkbox" ng-model="ShowCheck")
-
-
-
-
-script(src="../scripts/main.js")
+      .row.main-low-margin.text-center
+        .col-md-4.col-sm-4
+          .circle-body
+            i.fa.fa-truck.fa-5x.icon-set
+          h3 TESTED DESIGN
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+        .col-md-4.col-sm-4
+          .circle-body
+            i.fa.fa-dollar.fa-5x.icon-set
+          h3 SAVE YOUR MONEY
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+        .col-md-4.col-sm-4
+          .circle-body
+            i.fa.fa-envelope.fa-5x.icon-set
+          h3 WELL DOCUMENTED
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+      .row.main-low-margin
+        .col-md-8.col-sm-8
+          h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+        .col-md-4.col-sm-4.text-center
+          img.img-circle(src='../img/person.png')
+          h3 Lorem ipsum dolor
+          h4 Lorem ipsum dolor sit
+      .row.main-low-margin
+        .col-md-3.col-sm-3.text-center
+          i.fa.fa-desktop.fa-5x
+          h3 TESTED DESIGN
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+        .col-md-3.col-sm-3.text-center
+          i.fa.fa-comments-o.fa-5x
+          h3 READY TO USE
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+        .col-md-6.col-sm-6
+          h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+    .space-bottom
+    #footer
+      .row
+        .col-md-4
+          h4 Quick Information :
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            | Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+          button.btn.btn-primary(type='submit') Get Quote
+        .col-md-4
+          h4 Need Help ? Write Us.
+          hr
+          form
+            .row
+              .col-md-6.col-sm-6
+                .form-group
+                  input.form-control(type='text', required='required', placeholder='Name')
+              .col-md-6.col-sm-6
+                .form-group
+                  input.form-control(type='text', required='required', placeholder='Email address')
+            .row
+              .col-md-12.col-sm-12
+                .form-group
+                  textarea#message.form-control(name='message', required='required', rows='3', placeholder='Message')
+                .form-group
+                  button.btn.btn-primary(type='submit') Submit Request
+        .col-md-4
+          a(href='#')
+            i.fa.fa-facebook-square.fa-3x.color-facebook
+          a(href='#')
+            i.fa.fa-twitter-square.fa-3x.color-twitter
+          a(href='#')
+            i.fa.fa-google-plus-square.fa-3x.color-google-plus
+          a(href='#')
+            i.fa.fa-linkedin-square.fa-3x.color-linkedin
+          a(href='#')
+            i.fa.fa-pinterest-square.fa-3x.color-pinterest
+          hr
+          p
+            | 103, New Street,
+            br
+            |                     New York, USA.
+            br
+            |                     Call: +23-00-89-009
+            br
+            |                     Email: demo@yourdomain.com
+            br
+          |                 2014 www.yourdomain.com | All Right Reserved
+    script(src='../js/jquery.js')
+    script(src='../js/bootstrap.min.js')
+    script(src='../Slides-SlidesJS-3/examples/playing/js/jquery.slides.min.js')
+    script.
+      $(document).ready(function () {
+        $('#slides').slidesjs({
+          width: 940,
+          height: 528,
+          play: {
+            active: true,
+            auto: true,
+            interval: 4000,
+            swap: true
+          }
+        });
+        $('#slides >').slice(1).remove();
+      });

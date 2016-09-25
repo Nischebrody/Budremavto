@@ -1,0 +1,65 @@
+nav .nav{
+    font-size: 11px;
+}
+.header-tel-number a img{
+    height: 20px;
+}
+@media all and (min-width: 930px) {
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+        margin-left: -15px;
+        margin-top: -15px;
+    }
+}
+.navbar-right i{
+    padding-right: 5px;
+}
+.fa-phone{
+    padding-right: 5px;
+}
+.style-header{
+    background-color: #000000;
+    color: #cce2ff;
+    border-color: #000000;
+}
+#brand-title-div{
+    color: white;
+}
+#brand-image{
+    float: left;
+    display: inline-block;
+    vertical-align: top;
+}
+#brand-title{
+    float: left;
+/*    font-size: 40px;*/
+    line-height: normal;
+    color: white;
+}
+
+.header-tel-number + .container, .footer-container > .container{
+    margin-top: 0;
+}
+.header-tel-number{
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+.header-tel-number span{
+    float: left;
+    padding-top: 5px;
+    margin-bottom: -10px;
+    color: white;
+}
+
+.header-tel-number span:not(:first-of-type){
+    float: right;
+    padding: 5px 0 0 15px;
+}
+
+.header-tel-number>span>a{
+    color: #FDFDDA;
+}
+
+.navbar-brand{
+    font-size: 26px;
+}
