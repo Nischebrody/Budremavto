@@ -47,6 +47,10 @@ app.get('/prices', function (req, res) {
     res.render(views + "prices.jade");
 });
 
+app.get('/maps', function(req, res){
+    res.render(views + 'maps.jade');
+})
+
 var server = app.listen(8080, 'localhost', function () {
     var host = server.address().address;
     var port = server.address().port;
